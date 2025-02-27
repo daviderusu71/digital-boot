@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DigitalBoost🚀 - Creștem Afacerea Ta Online</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* CSS pentru efecte și stiluri */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        header .logo {
+            font-size: 1.8rem;
+            margin-left: 20px;
+        }
+
+        header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            text-align: right;
+            margin-right: 20px;
+        }
+
+        header nav ul li {
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            background: #1e3c72;
+            background-image: url('images/close-up-hands-typing-desk.jpg'); /* Imagine exemplu */
+            background-position: center;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .hero-content {
+            z-index: 2;
+            text-align: center;
+        }
+
+        .cta-button {
+            background-color: #ff7f50;
+            color: white;
+            padding: 15px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .cta-button:hover {
+            background-color: #e06c3a;
+        }
+
+        section {
+            padding: 50px 20px;
+            margin-top: 80px; /* Pentru a evita suprapunerea cu header-ul fix */
+        }
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .service-list {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .service {
+            width: 30%;
+            text-align: center;
+            padding: 20px;
+            border-radius: 5px;
+            background-color: #f4f4f4;
+            transition: transform 0.3s ease;
+        }
+
+        .service:hover {
+            transform: scale(1.05);
+        }
+
+        #media .media-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        #media .media-item img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Stilizare pentru secțiunea de contact și formular */
+#contact {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.contact-info {
+    margin-bottom: 40px;
+}
+
+.contact-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.contact-info a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+    color: #ff7f50;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 80%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.cta-button {
+    background-color: #ff7f50;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #e06c3a;
+}
+
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        footer .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        footer .footer-section {
+            width: 30%;
+            margin-bottom: 20px;
+        }
+
+        footer .social-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        footer .social-links li {
+            margin: 5px 0;
+        }
+
+        .carousel {
+            display: flex;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .carousel-item {
+            margin: 0 10px;
+            width: 200px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel-item:hover {
+            transform: scale(1.1);
+        }
+
+        #prev, #next {
+            background-color: #ff7f50;
+            border: none;
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        #prev:hover, #next:hover {
+            background-color: #e06c3a;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">DigitalBoost🚀</div>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Servicii</a></li>
+                <li><a href="#about">Despre</a></li>
+                <li><a href="#testimonials">Testimoniale</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home" class="hero">
+        <h1>Creștem Afacerea Ta Online 🚀</h1>
+        <p>Servicii profesionale de Web Design, SEO și Marketing Digital.</p>
+        <a href="#contact" class="cta-button">Solicită ofertă</a>
+    </section>
+
+    <section id="services">
+        <h2>Serviciile Noastre</h2>
+        <div class="service-list">
+            <div class="service" data-aos="fade-up" data-aos-duration="1000">
+                <h3>Web Design</h3>
+                <p>Site-uri moderne și optimizate.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="1200">
+                <h3>SEO</h3>
+                <p>Creștem vizibilitatea pe Google.</p>
+            </div>
+            <div class="service" data-aos="fade-up" data-aos-duration="1400">
+                <h3>Marketing Digital</h3>
+                <p>Promovare pe social media și reclame.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>Despre Noi</h2>
+        <p>DigitalBoost este agenția ta de încredere pentru creșterea online.</p>
+    </section>
+
+    <section id="testimonials">
+        <h2>Testimoniale</h2>
+        <p>„Am avut rezultate excelente cu DigitalBoost!” - Client Mulțumit</p>
+    </section>
+
+    <section id="media">
+        <h2>Media</h2>
+        <div class="media-content">
+            <div class="media-item">
+                <img src="./images/camera-photography-design-studio-editing-concept.jpg" alt="Portofoliu 1">
+            </div>
+            <div class="media-item">
+                <img src="./images/laptop-wooden-table.jpg" alt="Portofoliu 2">
+            </div>
+            <div class="media-item">
+                <video controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+
+        <div id="carousel">
+            <img class="carousel-item" src="images/close-up-hands-typing-desk.jpg" alt="Portofoliu 1">
+            <img class="carousel-item" src="images/laptop-wooden-table.jpg" alt="Portofoliu 2">
+        </div>
+
+        <button id="prev">Prev</button>
+        <button id="next">Next</button>
+    </section>
+
+    <section id="contact">
+        <h2>Contactează-ne</h2>
+        <p>Vrei să discutăm despre un proiect sau ai întrebări? Completează formularul de mai jos și te vom contacta cât mai curând posibil.</p>
+        
+        <div class="contact-info">
+            <ul class="social-links">
+                <li><a href="mailto:davidrusu556@gmail.com">Email: davidrusu556@gmail.com</a></li>
+                <li><a href="tel:+3478593182">Telefon: +3478593182</a></li>
+                <li><a href="https://github.com/DavidRusu">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/davidrusu">LinkedIn</a></li>
+            </ul>
+        </div>
+    
+        <form id="contact-form" action="submit_form.php" method="post">
+            <div class="form-group">
+                <label for="name">Nume</label>
+                <input type="text" id="name" name="name" required placeholder="Introdu numele tău">
+            </div>
+    
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required placeholder="Introdu adresa ta de email">
+            </div>
+    
+            <div class="form-group">
+                <label for="message">Mesaj</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Scrie mesajul tău"></textarea>
+            </div>
+    
+            <button type="submit" class="cta-button">Trimite Mesajul</button>
+        </form>
+    </section>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Despre DigitalBoost</h3>
+                <p>Transformăm afaceri prin soluții digitale inovative.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Urmărește-ne</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/davidrusu">LinkedIn</a></li>
+                    <li><a href="https://github.com/DavidRusu">GitHub</a></li>
+                    <li><a href="https://facebook.com/davidrusu">Facebook</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+</html>
